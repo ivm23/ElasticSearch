@@ -1,0 +1,33 @@
+﻿<Window x:Class="WpfElasticSearch.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfElasticSearch"
+        xmlns:control="clr-namespace:WpfElasticSearch.Views.Controls"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    
+    <Window.Resources>
+
+        <Style TargetType="TextBox" BasedOn="{StaticResource standartTextBox}">
+            <Setter Property="TextBox.MinWidth" Value="292"/>
+            <Setter Property="TextBox.MaxWidth" Value="300"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="Margin" Value="3,3,3,0"/>
+        </Style>
+
+        <Style TargetType="ListBox" BasedOn="{StaticResource standartListBox}">
+            <Setter Property="ListBox.Width" Value="297"/>
+            <Setter Property="ListBox.Height" Value="152"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+        </Style>
+               
+        
+    </Window.Resources>
+
+    <Grid>
+        <control:SearchString x:Name="searchStringControl"/> 
+    </Grid>
+</Window>
